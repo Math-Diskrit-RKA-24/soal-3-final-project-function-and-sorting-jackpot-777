@@ -9,7 +9,8 @@ def createNewPlayer(name, damage=0, defensePower=0):
                   damage = damage,
                   health = 100,
                   defensePower = defensePower,
-                  defense = bool(False))
+                  defense = bool(False)
+                  )
     return player
 
 def addPlayer(player):
