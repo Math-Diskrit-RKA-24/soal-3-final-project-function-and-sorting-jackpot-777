@@ -36,7 +36,7 @@ def attackPlayer(attacker:dict, target:dict):
         setPlayer(target, "health", target["health"]-attacker["damage"])
         setPlayer(attacker, "score", attacker["score"] + 1)
     else:
-        setPlayer(target, "health", target["health"]-attacker["damage"]+target["defensePower"])
+        setPlayer(target, "health", target["health"]-attacker["damage"]+target["defensePower"] if target["defensePower"] <= attacker["damage"] else target["health"])
         setPlayer(attacker, "score", attacker["score"] + 0.8)
         setPlayer(target, "defense", False)
     return
